@@ -23,4 +23,4 @@ class Solution:
             else:
                 j = mid - 1
         if i > j:
-            return j
+            return i
