@@ -11,10 +11,10 @@ class Solution:
         for u, v, p in flights:
             d[u] += [(v, p)]
 
-        q = collections.deque([(src, -1, 0)])
+        q = collections.deque([(src, -1, 0)]) 
 
         while q:
-            pos, k, cost = q.popleft()
+            pos, k, cost = q.popleft()  #better than list.pop()
             if pos == dst or k == K:
                 continue
             else:
