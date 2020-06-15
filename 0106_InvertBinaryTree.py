@@ -31,7 +31,7 @@ class Solution:
 #  / \   / \
 # 1   3 6   9
 
-#BFS:
+#BFS :
 
 class Solution:
     def invertTree(self, root: TreeNode) -> TreeNode:
@@ -44,7 +44,7 @@ class Solution:
                 queue.append(node.right)
         return root
 
-#DFS:
+#DFS :
 
 class Solution:
     def invertTree(self, root: TreeNode) -> TreeNode:
