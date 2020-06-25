@@ -19,4 +19,29 @@ class Solution:
 
 
 # TODO: #2 Add optimal approach here
+# Optimal Approach: O(logn * logn)
+class Solution:
+    def countNodes(self, root: TreeNode) -> int:
+        node = root
+        lh = rh = 0
+        while node:
+            lh += 1
+            node = node.left
 
+        node = root
+        while node:
+            rh += 1
+            node = node.right
+
+        if lh == rh:
+            return 2 ** lh - 1
+
+        return 1 + self.countNodes(root.left) + self.countNodes(root.right)
+
+
+# Recursive O(logn * logn)
+class Solution:
+    def countNodes(self, root: TreeNode) -> int:
+        if root == None:
+            return 0
+        return 1 + self.countNodes(root.left) + self.countNodes(root.right)
